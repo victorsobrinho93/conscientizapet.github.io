@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+}
+
+body {
+    background-color: rgb(253, 202, 255);
+    max-width: 100vw;
+}
+
+#main {
+    display: flex;
+    justify-content: space-around;
+}
+
+#side-content {
+    /* background-color: blue; */
+    width: 30%;
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+#side-content img {
+    max-width: 100%;
+    border-radius: 1rem;
+    /* padding: 3rem; */
+}
+
+/* #side-content {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
+    max-width: 25%;
+    width: 25%;
+}
+
+#side-content img {
+    max-width: 100%;
+    height: auto;
+} */
+
+#navbar {
+    /* background-color: #7700a7; */
+    background: linear-gradient(#7700a7, #1e0027);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 3rem;
+}
+
+#logo {
+    font-family: "Chelsea Market", system-ui;
+    font-size: 3rem;
+}
+
+#subtitulo {
+    font-weight: 400;
+}
+
+#artigos {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    row-gap: 1rem;
+    width: 50%;
+    max-width: 50%;
+}
+
+.artigo {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 75%;
+    margin-left: 25%;
+    line-height: 2;
+}
+
+.lista-artigo li {
+    position: relative;
+    padding-left: 32px;
+}
+
+.lista-artigo li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    /* top: 6px; */
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url("/assets/img/pata.svg") no-repeat center;
+    background-size: contain;
+}
+
+.lista-artigo {
+    list-style: none;
+}
+
+.titulo {
+    color: #1e0027;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.tagline {
+    font-family: "Quintessential", serif;
+    margin-top: 1rem;
+    font-size: 20px;
+    color: #7700a7;
+}
+
+.artigo-img {
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
