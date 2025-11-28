@@ -12,14 +12,63 @@ body {
 }
 
 #main {
-    display: flex;
-    justify-content: space-around;
+    /* display: flex; */
 }
 
+/** navigation menu */
+
+#navbar {
+    /* background-color: #7700a7; */
+    background: linear-gradient(#7700a7, #1e0027);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    justify-content: center;
+}
+
+#logo {
+    font-family: "Chelsea Market", system-ui;
+    margin-bottom: 0.5rem;
+}
+
+#subtitulo {
+    font-weight: 300;
+}
+
+#nav-menu {
+    background-color: #fff;
+    display: flex;
+    column-gap: 1rem;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding: 0.5rem 0.2rem;
+}
+
+#nav-menu a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 700;
+}
+
+#nav-redes {
+    display: flex;
+    flex-direction: row;
+}
+
+.icons {
+    width: 2rem;
+    height: auto;
+    display: block;
+    max-width: 2rem;
+}
+
+/** Side content **/
+
 #side-content {
-    /* background-color: blue; */
-    width: 30%;
-    max-width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -31,58 +80,130 @@ body {
     /* padding: 3rem; */
 }
 
-/* #side-content {
-    display: flex;
-    flex-direction: column;
-    margin-right: 2rem;
-    max-width: 25%;
-    width: 25%;
-}
-
-#side-content img {
-    max-width: 100%;
-    height: auto;
-} */
-
-#navbar {
-    /* background-color: #7700a7; */
-    background: linear-gradient(#7700a7, #1e0027);
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    margin-bottom: 3rem;
-}
-
-#logo {
-    font-family: "Chelsea Market", system-ui;
-    font-size: 3rem;
-}
-
-#subtitulo {
-    font-weight: 400;
-}
-
-#artigos {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    row-gap: 1rem;
-    width: 50%;
-    max-width: 50%;
-}
+/** Artigos **/
 
 .artigo {
     background-color: white;
     display: flex;
     flex-direction: column;
-    margin: 0 1rem;
-    padding: 2rem;
+
     border-radius: 1rem;
-    max-width: 75%;
-    margin-left: 25%;
     line-height: 2;
+}
+
+.titulo {
+    color: #1e0027;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.tagline {
+    font-family: "Quintessential", serif;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #7700a7;
+}
+
+.artigo-img {
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+/** Media Queries **/
+
+@media (max-width: 576px) {
+    #logo {
+        font-size: 2rem;
+    }
+
+    #subtitulo {
+        width: 100vw;
+        text-align: center;
+        font-size: clamp(0.7rem, 3vw, 1rem);
+    }
+
+    #main {
+        flex-direction: column;
+    }
+
+    #artigos {
+        display: flex;
+        row-gap: 1rem;
+        flex-direction: column;
+    }
+
+    .artigo {
+        padding: 1rem;
+        margin: 0.3rem;
+    }
+
+    .titulo {
+        font-size: 1.3rem;
+    }
+
+    #side-content {
+        margin: 0.3rem;
+    }
+
+    #artigos img {
+        margin: 0.3rem;
+        border-radius: 1rem;
+    }
+}
+
+@media (min-width: 993px) {
+    #logo {
+        font-size: 3rem;
+    }
+    #artigos {
+        /* align-items: end; */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        width: 100%;
+        max-width: 75vw;
+        margin: 0 auto;
+    }
+
+    .artigo {
+        /* max-width: 100%; */
+        /* margin: 0 1rem; */
+        /* max-width: 45%; */
+        /* margin-left: 25%; */
+        height: auto;
+        width: 100%;
+        margin: 0;
+        padding: 2rem;
+    }
+    .artigo img {
+        max-width: 100%;
+    }
+    .card {
+        max-width: 100%;
+        border-radius: 1rem;
+    }
+
+    .titulo {
+        font-size: 2rem;
+    }
+
+    #main {
+        justify-content: space-around;
+    }
+
+    #side-content {
+        /* background-color: blue; */
+        width: 30%;
+        max-width: 30%;
+    }
+}
+
+#artigos {
+    margin-bottom: 3rem;
+}
+
+.lista-artigo {
+    list-style: none;
 }
 
 .lista-artigo li {
@@ -100,27 +221,4 @@ body {
     height: 1.5rem;
     background: url("/assets/img/pata.svg") no-repeat center;
     background-size: contain;
-}
-
-.lista-artigo {
-    list-style: none;
-}
-
-.titulo {
-    color: #1e0027;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    font-size: 2rem;
-}
-
-.tagline {
-    font-family: "Quintessential", serif;
-    margin-top: 1rem;
-    font-size: 20px;
-    color: #7700a7;
-}
-
-.artigo-img {
-    border-radius: 1rem;
-    margin-bottom: 1rem;
 }
